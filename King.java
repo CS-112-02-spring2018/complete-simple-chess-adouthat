@@ -12,8 +12,16 @@ public class King extends ChessPiece {
         try {
             if (diffx == 1 || diffx == -1 || diffx == 0 && diffy == 1 || diffy == -1 || diffy == 0) {
                 if(!board.getBoardTile(co1, co2).equals("---")){
-                    if(board.getBoardTile(co1, co2).substring(1, 2).equalsIgnoreCase("K")){
-                        System.out.println("GAME OVER THE KING IS DEAD");
+                    if(board.getBoardTile(co1, co2).substring(1, 2).equals("K")){
+                        System.out.println(this.getCurrentMove() + "Valid Move");
+                        System.out.println("GAME OVER THE KING IS DEAD White Wins");
+                        System.out.println(board.toString());
+                        System.exit(0);
+                    }
+                    else if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
+                        System.out.println(this.getCurrentMove() + "Valid Move");
+                        System.out.println("GAME OVER THE KING IS DEAD Black Wins");
+                        System.out.println(board.toString());
                         System.exit(0);
                     }
                     if (Character.isUpperCase((ChessPiece.getBoardTile(co1, co2).charAt(1))) && Character.isUpperCase(this.getPieceType())){

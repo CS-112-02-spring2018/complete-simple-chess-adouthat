@@ -36,8 +36,16 @@ public class Pawn extends ChessPiece{
                     System.out.println("ATTACKING");
                     if(this.getPieceColor().equalsIgnoreCase("white") && (this.getCol() + 1 == co2) && (this.getRow() + 1 == co1))
                         {
-                            if(board.getBoardTile(co1, co2).substring(1, 2).equalsIgnoreCase("K")){
-                                System.out.println("GAME OVER THE KING IS DEAD");
+                            if(board.getBoardTile(co1, co2).substring(1, 2).equals("K")){
+                                System.out.println(this.getCurrentMove() + "Valid Move");
+                                System.out.println("GAME OVER THE KING IS DEAD White Wins");
+                                System.out.println(board.toString());
+                                System.exit(0);
+                            }
+                            else if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
+                                System.out.println(this.getCurrentMove() + "Valid Move");
+                                System.out.println("GAME OVER THE KING IS DEAD Black Wins");
+                                System.out.println(board.toString());
                                 System.exit(0);
                             }
                             this.setBoardLocation(co1, co2);
@@ -46,8 +54,16 @@ public class Pawn extends ChessPiece{
                     }
                     else if(this.getPieceColor().equalsIgnoreCase("white") && (this.getCol() + 1 == co2) && (this.getRow() - 1 == co1))
                     {
-                        if(board.getBoardTile(co1, co2).substring(1, 2).equalsIgnoreCase("K")){
-                            System.out.println("GAME OVER THE KING IS DEAD");
+                        if(board.getBoardTile(co1, co2).substring(1, 2).equals("K")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD White Wins");
+                            System.out.println(board.toString());
+                            System.exit(0);
+                        }
+                        else if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD Black Wins");
+                            System.out.println(board.toString());
                             System.exit(0);
                         }
                         this.setBoardLocation(co1, co2);
@@ -56,8 +72,16 @@ public class Pawn extends ChessPiece{
                     }
                     else if(this.getPieceColor().equalsIgnoreCase("black") && (this.getCol() -1 == co2) && (this.getRow() - 1 == co1))
                     {
-                        if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
-                            System.out.println("GAME OVER THE KING IS DEAD");
+                        if(board.getBoardTile(co1, co2).substring(1, 2).equals("K")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD White Wins");
+                            System.out.println(board.toString());
+                            System.exit(0);
+                        }
+                        else if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD Black Wins");
+                            System.out.println(board.toString());
                             System.exit(0);
                         }
                         this.setBoardLocation(co1,co2);
@@ -66,8 +90,16 @@ public class Pawn extends ChessPiece{
                     }
                     else if(getPieceColor().equalsIgnoreCase("black") && (this.getCol() - 1 == co2) && (this.getRow() + 1 == co1))
                     {
-                        if(board.getBoardTile(co1, co2).substring(1, 2).equalsIgnoreCase("k")){
-                            System.out.println("GAME OVER THE KING IS DEAD");
+                        if(board.getBoardTile(co1, co2).substring(1, 2).equals("K")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD White Wins");
+                            System.out.println(board.toString());
+                            System.exit(0);
+                        }
+                        else if(board.getBoardTile(co1, co2).substring(1, 2).equals("k")){
+                            System.out.println(this.getCurrentMove() + "Valid Move");
+                            System.out.println("GAME OVER THE KING IS DEAD Black Wins");
+                            System.out.println(board.toString());
                             System.exit(0);
                         }
                         this.setBoardLocation(co1, co2);
